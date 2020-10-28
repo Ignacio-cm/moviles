@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.MainActivity">
+
+    <EditText
+        android:id="@+id/TextNombre"
+        android:layout_width="361dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Nombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/TextTelefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextNombre" />
+
+    <EditText
+        android:id="@+id/TextNumber"
+        android:layout_width="77dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextTelefono" />
+
+    <TextView
+        android:id="@+id/textNumeroSuerte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Número de la suerte"
+        app:layout_constraintBottom_toBottomOf="@+id/TextNumber"
+        app:layout_constraintStart_toEndOf="@+id/TextNumber"
+        app:layout_constraintTop_toTopOf="@+id/TextNumber" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Teléfono"
+        app:layout_constraintBottom_toBottomOf="@+id/TextTelefono"
+        app:layout_constraintStart_toEndOf="@+id/TextTelefono"
+        app:layout_constraintTop_toTopOf="@+id/TextTelefono" />
+
+    <RadioGroup
+        android:id="@+id/RadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextNumber">
+
+        <RadioButton
+            android:id="@+id/radioHeart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Corazones" />
+
+        <RadioButton
+            android:id="@+id/radioDiamond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Diamantes" />
+
+        <RadioButton
+            android:id="@+id/radioClub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Treboles" />
+
+        <RadioButton
+            android:id="@+id/radioSpade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Espadas" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/checkWildcard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="40dp"
+        android:text="Wildcard"
+        app:layout_constraintStart_toEndOf="@+id/RadioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <CheckBox
+        android:id="@+id/checkPoker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="8dp"
+        android:text="Póquer/Llena"
+        app:layout_constraintStart_toEndOf="@+id/RadioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/checkWildcard" />
+
+    <CheckBox
+        android:id="@+id/checkTriple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="8dp"
+        android:text="Triple/Doble par"
+        app:layout_constraintStart_toEndOf="@+id/RadioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/checkPoker" />
+
+    <CheckBox
+        android:id="@+id/checkPair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="8dp"
+        android:text="Par/Alta"
+        app:layout_constraintStart_toEndOf="@+id/RadioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/checkTriple" />
+
+    <CheckBox
+        android:id="@+id/checkFlush"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="8dp"
+        android:text="Escalera"
+        app:layout_constraintStart_toEndOf="@+id/RadioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/checkPair" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAccept"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="2dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_check" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
